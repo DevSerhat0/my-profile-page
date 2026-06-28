@@ -1,0 +1,156 @@
+/*===Reset===*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'fira code';
+    line-height: 1.6;
+}
+
+/*===Layout===*/
+
+.container {
+    width: min(900px,90%);
+    margin: 2rem auto;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+section {
+    margin-block: 3rem;
+}
+
+/*===Components===*/
+
+.profile {
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+
+article {
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.img-box {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.preview-box {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.preview1 {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    display: block;
+}
+
+.about-more {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.social-media {
+    justify-content: center;
+}
+
+/*===TypoGraphy===*/
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+p {
+    text-align: center;
+}
+
+figcaption {
+    text-align: center;
+}
+
+/*===Lısts===*/
+
+.skills ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.skills li {
+    list-style: none;
+}
+
+/*===Lınks===*/
+
+.icons a,
+.article-icons a,
+.footer-icons {
+    display: inline-flex;
+}
+
+a {
+    transition: 
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+a:hover {
+    filter: drop-shadow(0 5px 15px rgba(251,191,36,0.4));
+    transform: translateY(-5px);
+}
+
+a:active {
+    transform: translateY(-2px);
+}
+
+a:focus-visible {
+    outline: 2px solid #fbbf24;
+    outline-offset: 4px;
+}
+
+/*===Icons===*/
+
+.article-icons,
+.icons,
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+svg {
+    fill: wheat;
+}
+
+/*===Utilities===*/
+
+hr {
+    border: none;
+    height: 1px;
+    background: #ddd;
+    margin: 3rem 0;
+}
