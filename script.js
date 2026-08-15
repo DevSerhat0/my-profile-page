@@ -1,14 +1,18 @@
-
 const year = document.querySelector("#year");
 
-console.log(year);
+year.textContent = new Date().getFullYear();
 
-const date = new Date();
+const scrollTop = document.querySelector(".scroll-Top");
 
-console.log(date);
+window.addEventListener("scroll", () => {
+    if (scrollY > 1200) {
+        scrollTop.classList.add("visible");
+    }
+    else {
+        scrollTop.classList.remove("visible");
+    }
+});
 
-const fullyear = date.getFullYear();
-
-console.log(fullyear);
-
-year.textContent = fullyear;
+scrollTop.addEventListener("click", () => {
+    window.scrollTo(0,0);
+});
