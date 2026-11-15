@@ -4,8 +4,21 @@ year.textContent = new Date().getFullYear();
 
 const scrollTop = document.querySelector(".scroll-Top");
 
+function getScrollPercentage() {
+
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+    if (maxScroll === 0) {
+        return 0;
+    }
+
+    const percentage = window.scrollY / maxScroll * 100;
+
+    return percentage;
+}
+
 window.addEventListener("scroll", () => {
-    if (scrollY > 1200) {
+    if (getScrollPercentage() >= 75) {
         scrollTop.classList.add("visible");
     }
     else {
